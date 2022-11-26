@@ -10,6 +10,8 @@
 #include "12x16_font.h"
 #include "16x32_font.h"
 
+#include "string_view"
+
 namespace pico_ssd1306{
 
     /// \enum pico_ssd1306::Rotation
@@ -36,7 +38,7 @@ namespace pico_ssd1306{
     /// \param anchor_x, anchor_y - coordinates setting where to put the text
     /// \param mode - mode describes setting behavior. See WriteMode doc for more information
     /// \param rotation - either rotates the text by 90 deg or leaves it unrotated
-    void drawText(pico_ssd1306::SSD1306 *ssd1306, const unsigned char * font, const char * text, uint8_t anchor_x, uint8_t anchor_y, WriteMode mode = WriteMode::ADD, Rotation rotation = Rotation::deg0);
+    void drawText(pico_ssd1306::SSD1306 *ssd1306, const unsigned char * font, std::string_view text, uint8_t anchor_x, uint8_t anchor_y, WriteMode mode = WriteMode::ADD, Rotation rotation = Rotation::deg0);
 }
 
 #endif //SSD1306_TEXTRENDERER_H
