@@ -1,3 +1,7 @@
+# Frogieder's modification of SSD1306 library
+The only change made here is that this version uses std::string_view instead of char[]* to pass text.
+This is the preffered way in modern C++ and it's a lot easier to work with.
+
 # SSD1306 OLED Library for RP2040
 
 ## 1. Importing the library
